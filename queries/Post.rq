@@ -1,0 +1,8 @@
+# Post 
+SELECT DISTINCT ?Post_url ?heldBy_url ?reportsTo_url ?postIn_url ?role_url WHERE {
+  ?Post_url a <http://www.w3.org/ns/org#Post> .
+  OPTIONAL { ?Post_url <http://www.w3.org/ns/org#heldBy> ?heldBy_url . }
+  OPTIONAL { ?Post_url <http://www.w3.org/ns/org#reportsTo> ?reportsTo_url . }
+  OPTIONAL { ?Post_url <http://www.w3.org/ns/org#postIn> ?postIn_url . }
+  ?Post_url <http://www.w3.org/ns/org#role> ?role_url . 
+}

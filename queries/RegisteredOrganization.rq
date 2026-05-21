@@ -1,0 +1,9 @@
+# RegisteredOrganization 
+SELECT DISTINCT ?RegisteredOrganization_url ?rechtspersoonlijkheid_url ?rechtstoestand_url ?rechtsvorm_url ?registration_url ?legalName WHERE {
+  ?RegisteredOrganization_url a <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  OPTIONAL { ?RegisteredOrganization_url <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> ?rechtspersoonlijkheid_url . }
+  OPTIONAL { ?RegisteredOrganization_url <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> ?rechtstoestand_url . }
+  OPTIONAL { ?RegisteredOrganization_url <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> ?rechtsvorm_url . }
+  ?RegisteredOrganization_url <http://www.w3.org/ns/regorg#registration> ?registration_url . 
+  ?RegisteredOrganization_url <http://www.w3.org/ns/regorg#legalName> ?legalName . 
+}

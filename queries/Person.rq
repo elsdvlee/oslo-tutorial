@@ -1,0 +1,5 @@
+# Person 
+SELECT DISTINCT ?Person_url ?basedAt_url WHERE {
+  ?Person_url a <http://www.w3.org/ns/person#Person> .
+  OPTIONAL { ?Person_url <http://www.w3.org/ns/org#basedAt> ?basedAt_url . }
+}

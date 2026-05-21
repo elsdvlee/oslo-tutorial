@@ -1,0 +1,5 @@
+# PublicOrganisation 
+SELECT DISTINCT ?PublicOrganisation_url ?spatial_url WHERE {
+  ?PublicOrganisation_url a <http://data.europa.eu/m8g/PublicOrganisation> .
+  OPTIONAL { ?PublicOrganisation_url <http://purl.org/dc/terms/spatial> ?spatial_url . }
+}

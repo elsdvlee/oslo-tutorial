@@ -1,0 +1,8 @@
+# Membership 
+SELECT DISTINCT ?Membership_url ?member_url ?organization_url ?memberDuring_url ?role_url WHERE {
+  ?Membership_url a <http://www.w3.org/ns/org#Membership> .
+  ?Membership_url <http://www.w3.org/ns/org#member> ?member_url . 
+  ?Membership_url <http://www.w3.org/ns/org#organization> ?organization_url . 
+  OPTIONAL { ?Membership_url <http://www.w3.org/ns/org#memberDuring> ?memberDuring_url . }
+  ?Membership_url <http://www.w3.org/ns/org#role> ?role_url . 
+}

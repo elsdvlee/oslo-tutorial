@@ -1,0 +1,6 @@
+# Join Post → reportsTo → Post2
+SELECT DISTINCT ?Post_url ?Post2_url WHERE {
+  ?Post_url a <http://www.w3.org/ns/org#Post> .
+  ?Post2_url a <http://www.w3.org/ns/org#Post> .
+  ?Post_url <http://www.w3.org/ns/org#reportsTo> ?Post2_url .
+}

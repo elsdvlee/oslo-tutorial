@@ -1,0 +1,8 @@
+# ChangeEvent 
+SELECT DISTINCT ?ChangeEvent_url ?hasFormalFramework_url ?originalOrganization_url ?resultingOrganization_url ?date WHERE {
+  ?ChangeEvent_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  OPTIONAL { ?ChangeEvent_url <http://data.europa.eu/m8g/hasFormalFramework> ?hasFormalFramework_url . }
+  OPTIONAL { ?ChangeEvent_url <http://www.w3.org/ns/org#originalOrganization> ?originalOrganization_url . }
+  OPTIONAL { ?ChangeEvent_url <http://www.w3.org/ns/org#resultingOrganization> ?resultingOrganization_url . }
+  ?ChangeEvent_url <http://purl.org/dc/terms/date> ?date . 
+}

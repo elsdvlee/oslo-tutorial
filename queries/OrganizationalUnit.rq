@@ -1,0 +1,5 @@
+# OrganizationalUnit 
+SELECT DISTINCT ?OrganizationalUnit_url ?unitOf_url WHERE {
+  ?OrganizationalUnit_url a <http://www.w3.org/ns/org#OrganizationalUnit> .
+  ?OrganizationalUnit_url <http://www.w3.org/ns/org#unitOf> ?unitOf_url . 
+}

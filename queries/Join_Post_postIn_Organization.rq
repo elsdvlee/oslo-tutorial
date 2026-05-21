@@ -1,0 +1,6 @@
+# Join Post → postIn → Organization
+SELECT DISTINCT ?Post_url ?Organization_url WHERE {
+  ?Post_url a <http://www.w3.org/ns/org#Post> .
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?Post_url <http://www.w3.org/ns/org#postIn> ?Organization_url .
+}

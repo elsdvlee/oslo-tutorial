@@ -1,0 +1,6 @@
+# Join PublicOrganisation → spatial → Location
+SELECT DISTINCT ?PublicOrganisation_url ?Location_url WHERE {
+  ?PublicOrganisation_url a <http://data.europa.eu/m8g/PublicOrganisation> .
+  ?Location_url a <http://purl.org/dc/terms/Location> .
+  ?PublicOrganisation_url <http://purl.org/dc/terms/spatial> ?Location_url .
+}

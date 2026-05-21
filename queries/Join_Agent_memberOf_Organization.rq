@@ -1,0 +1,6 @@
+# Join Agent → memberOf → Organization
+SELECT DISTINCT ?Agent_url ?Organization_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?Agent_url <http://www.w3.org/ns/org#memberOf> ?Organization_url .
+}

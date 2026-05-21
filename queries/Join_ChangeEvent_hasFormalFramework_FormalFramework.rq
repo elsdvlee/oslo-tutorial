@@ -1,0 +1,6 @@
+# Join ChangeEvent → hasFormalFramework → FormalFramework
+SELECT DISTINCT ?ChangeEvent_url ?FormalFramework_url WHERE {
+  ?ChangeEvent_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?FormalFramework_url a <http://purl.org/vocab/cpsv#FormalFramework> .
+  ?ChangeEvent_url <http://data.europa.eu/m8g/hasFormalFramework> ?FormalFramework_url .
+}

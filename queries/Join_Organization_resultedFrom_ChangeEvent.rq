@@ -1,0 +1,6 @@
+# Join Organization → resultedFrom → ChangeEvent
+SELECT DISTINCT ?Organization_url ?ChangeEvent_url WHERE {
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?ChangeEvent_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?Organization_url <http://www.w3.org/ns/org#resultedFrom> ?ChangeEvent_url .
+}

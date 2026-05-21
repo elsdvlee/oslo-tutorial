@@ -1,0 +1,6 @@
+# Join Organization → hasRegisteredSite → Site
+SELECT DISTINCT ?Organization_url ?Site_url WHERE {
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?Site_url a <http://www.w3.org/ns/org#Site> .
+  ?Organization_url <http://www.w3.org/ns/org#hasRegisteredSite> ?Site_url .
+}

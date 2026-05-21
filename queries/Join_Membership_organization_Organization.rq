@@ -1,0 +1,6 @@
+# Join Membership → organization → Organization
+SELECT DISTINCT ?Membership_url ?Organization_url WHERE {
+  ?Membership_url a <http://www.w3.org/ns/org#Membership> .
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?Membership_url <http://www.w3.org/ns/org#organization> ?Organization_url .
+}

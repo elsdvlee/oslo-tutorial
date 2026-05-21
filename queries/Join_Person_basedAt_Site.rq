@@ -1,0 +1,6 @@
+# Join Person → basedAt → Site
+SELECT DISTINCT ?Person_url ?Site_url WHERE {
+  ?Person_url a <http://www.w3.org/ns/person#Person> .
+  ?Site_url a <http://www.w3.org/ns/org#Site> .
+  ?Person_url <http://www.w3.org/ns/org#basedAt> ?Site_url .
+}

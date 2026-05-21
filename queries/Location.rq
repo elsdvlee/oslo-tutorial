@@ -1,0 +1,6 @@
+# Location 
+SELECT DISTINCT ?Location_url ?geometry_url ?label WHERE {
+  ?Location_url a <http://purl.org/dc/terms/Location> .
+  OPTIONAL { ?Location_url <http://www.w3.org/ns/locn#geometry> ?geometry_url . }
+  ?Location_url <http://www.w3.org/2000/01/rdf-schema#label> ?label . 
+}

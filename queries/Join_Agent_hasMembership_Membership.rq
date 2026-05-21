@@ -1,0 +1,6 @@
+# Join Agent → hasMembership → Membership
+SELECT DISTINCT ?Agent_url ?Membership_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Membership_url a <http://www.w3.org/ns/org#Membership> .
+  ?Agent_url <http://www.w3.org/ns/org#hasMembership> ?Membership_url .
+}

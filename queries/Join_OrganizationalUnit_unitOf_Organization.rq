@@ -1,0 +1,6 @@
+# Join OrganizationalUnit → unitOf → Organization
+SELECT DISTINCT ?OrganizationalUnit_url ?Organization_url WHERE {
+  ?OrganizationalUnit_url a <http://www.w3.org/ns/org#OrganizationalUnit> .
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?OrganizationalUnit_url <http://www.w3.org/ns/org#unitOf> ?Organization_url .
+}

@@ -1,0 +1,25 @@
+# Organization 
+SELECT DISTINCT ?Organization_url ?hasSite_url ?subOrganizationOf_url ?changedBy_url ?hasPrimarySite_url ?hasSubOrganization_url ?resultedFrom_url ?hasRegisteredSite_url ?linkedTo_url ?hasPost_url ?hasUnit_url ?orgActivity_url ?altLabel ?description ?classification_url ?contactPoint_url ?purpose ?homepage ?logo ?orgStatus_url ?orgType_url ?prefLabel WHERE {
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasSite> ?hasSite_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#subOrganizationOf> ?subOrganizationOf_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#changedBy> ?changedBy_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasPrimarySite> ?hasPrimarySite_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasSubOrganization> ?hasSubOrganization_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#resultedFrom> ?resultedFrom_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasRegisteredSite> ?hasRegisteredSite_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#linkedTo> ?linkedTo_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasPost> ?hasPost_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#hasUnit> ?hasUnit_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/regorg#orgActivity> ?orgActivity_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/2004/02/skos/core#altLabel> ?altLabel . }
+  OPTIONAL { ?Organization_url <http://purl.org/dc/terms/description> ?description . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#classification> ?classification_url . }
+  OPTIONAL { ?Organization_url <http://schema.org/contactPoint> ?contactPoint_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/org#purpose> ?purpose . }
+  OPTIONAL { ?Organization_url <http://xmlns.com/foaf/0.1/homepage> ?homepage . }
+  OPTIONAL { ?Organization_url <http://schema.org/logo> ?logo . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/regorg#orgStatus> ?orgStatus_url . }
+  OPTIONAL { ?Organization_url <http://www.w3.org/ns/regorg#orgType> ?orgType_url . }
+  ?Organization_url <http://www.w3.org/2004/02/skos/core#prefLabel> ?prefLabel . 
+}

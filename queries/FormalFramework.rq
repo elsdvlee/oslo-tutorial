@@ -1,0 +1,5 @@
+# FormalFramework 
+SELECT DISTINCT ?FormalFramework_url ?title WHERE {
+  ?FormalFramework_url a <http://purl.org/vocab/cpsv#FormalFramework> .
+  ?FormalFramework_url <http://purl.org/dc/terms/title> ?title . 
+}

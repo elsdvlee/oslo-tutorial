@@ -1,0 +1,6 @@
+# Site 
+SELECT DISTINCT ?Site_url ?bestaatUit_url ?siteAddress_url WHERE {
+  ?Site_url a <http://www.w3.org/ns/org#Site> .
+  OPTIONAL { ?Site_url <https://data.vlaanderen.be/ns/organisatie#bestaatUit> ?bestaatUit_url . }
+  OPTIONAL { ?Site_url <http://www.w3.org/ns/org#siteAddress> ?siteAddress_url . }
+}

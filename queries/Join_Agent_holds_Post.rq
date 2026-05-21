@@ -1,0 +1,6 @@
+# Join Agent → holds → Post
+SELECT DISTINCT ?Agent_url ?Post_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Post_url a <http://www.w3.org/ns/org#Post> .
+  ?Agent_url <http://www.w3.org/ns/org#holds> ?Post_url .
+}
