@@ -1,0 +1,608 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a2/code/Agent_1> a dc:Agent;
+  <http://www.w3.org/ns/org#hasMembership> <http://example.com/a2/code/Membership_3>;
+  <http://www.w3.org/ns/org#headOf> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#holds> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Agent_2>;
+  <http://www.w3.org/ns/regorg#hasRegisteredOrganization> <http://example.com/a2/code/RegisteredOrganization_2> .
+
+<http://example.com/a2/code/Agent_2> a dc:Agent;
+  <http://www.w3.org/ns/org#hasMembership> <http://example.com/a2/code/Membership_1>;
+  <http://www.w3.org/ns/org#headOf> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#holds> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Agent_4>;
+  <http://www.w3.org/ns/regorg#hasRegisteredOrganization> <http://example.com/a2/code/RegisteredOrganization_3> .
+
+<http://example.com/a2/code/Agent_3> a dc:Agent;
+  <http://www.w3.org/ns/org#hasMembership> <http://example.com/a2/code/Membership_1>;
+  <http://www.w3.org/ns/org#headOf> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#holds> <http://example.com/a2/code/Post_2>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Agent_3>;
+  <http://www.w3.org/ns/regorg#hasRegisteredOrganization> <http://example.com/a2/code/RegisteredOrganization_1> .
+
+<http://example.com/a2/code/Agent_4> a dc:Agent;
+  <http://www.w3.org/ns/org#hasMembership> <http://example.com/a2/code/Membership_1>;
+  <http://www.w3.org/ns/org#headOf> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/org#holds> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Agent_2>;
+  <http://www.w3.org/ns/regorg#hasRegisteredOrganization> <http://example.com/a2/code/RegisteredOrganization_4> .
+
+<http://example.com/a2/code/Agent_5> a dc:Agent;
+  <http://www.w3.org/ns/org#hasMembership> <http://example.com/a2/code/Membership_1>,
+    <http://example.com/a2/code/Membership_2>;
+  <http://www.w3.org/ns/org#headOf> <http://example.com/a2/code/Organization_2>, <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#holds> <http://example.com/a2/code/Post_1>, <http://example.com/a2/code/Post_2>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a2/code/Organization_3>, <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Agent_3>;
+  <http://www.w3.org/ns/regorg#hasRegisteredOrganization> <http://example.com/a2/code/RegisteredOrganization_3>,
+    <http://example.com/a2/code/RegisteredOrganization_4> .
+
+<http://example.com/a2/code/ChangeEvent_1> a <http://www.w3.org/ns/org#ChangeEvent>;
+  <http://data.europa.eu/m8g/hasFormalFramework> <http://example.com/a2/code/FormalFramework_3>;
+  dc:date "2012-03-06T00:07:53.867Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/ns/org#originalOrganization> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#resultingOrganization> <http://example.com/a2/code/Organization_2> .
+
+<http://example.com/a2/code/ChangeEvent_2> a <http://www.w3.org/ns/org#ChangeEvent>;
+  <http://data.europa.eu/m8g/hasFormalFramework> <http://example.com/a2/code/FormalFramework_5>;
+  dc:date "2003-04-05T03:13:41.770Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/ns/org#originalOrganization> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#resultingOrganization> <http://example.com/a2/code/Organization_4> .
+
+<http://example.com/a2/code/ChangeEvent_3> a <http://www.w3.org/ns/org#ChangeEvent>;
+  <http://data.europa.eu/m8g/hasFormalFramework> <http://example.com/a2/code/FormalFramework_2>;
+  dc:date "2019-03-17T17:53:54.975Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/ns/org#originalOrganization> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#resultingOrganization> <http://example.com/a2/code/Organization_5> .
+
+<http://example.com/a2/code/ChangeEvent_4> a <http://www.w3.org/ns/org#ChangeEvent>;
+  <http://data.europa.eu/m8g/hasFormalFramework> <http://example.com/a2/code/FormalFramework_1>;
+  dc:date "2024-08-20T20:57:39.334Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/ns/org#originalOrganization> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#resultingOrganization> <http://example.com/a2/code/Organization_5> .
+
+<http://example.com/a2/code/ChangeEvent_5> a <http://www.w3.org/ns/org#ChangeEvent>;
+  <http://data.europa.eu/m8g/hasFormalFramework> <http://example.com/a2/code/FormalFramework_1>,
+    <http://example.com/a2/code/FormalFramework_2>;
+  dc:date "2006-05-20T16:17:24.548Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/ns/org#originalOrganization> <http://example.com/a2/code/Organization_3>,
+    <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#resultingOrganization> <http://example.com/a2/code/Organization_1>,
+    <http://example.com/a2/code/Organization_3> .
+
+<http://example.com/a2/code/FormalFramework_1> a <http://purl.org/vocab/cpsv#FormalFramework>;
+  dc:title "a2_title_1"@nl .
+
+<http://example.com/a2/code/FormalFramework_2> a <http://purl.org/vocab/cpsv#FormalFramework>;
+  dc:title "a2_title_2"@nl .
+
+<http://example.com/a2/code/FormalFramework_3> a <http://purl.org/vocab/cpsv#FormalFramework>;
+  dc:title "a2_title_3"@nl .
+
+<http://example.com/a2/code/FormalFramework_4> a <http://purl.org/vocab/cpsv#FormalFramework>;
+  dc:title "a2_title_4"@nl .
+
+<http://example.com/a2/code/FormalFramework_5> a <http://purl.org/vocab/cpsv#FormalFramework>;
+  dc:title "a2_title_5"@nl .
+
+<http://example.com/a2/code/Hoedanigheid_1> a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>;
+  <https://data.vlaanderen.be/ns/organisatie#contactinfo> <http://example.com/a2_contactinfo_1> .
+
+<http://example.com/a2/code/Hoedanigheid_2> a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>;
+  <https://data.vlaanderen.be/ns/organisatie#contactinfo> <http://example.com/a2_contactinfo_2> .
+
+<http://example.com/a2/code/Hoedanigheid_3> a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>;
+  <https://data.vlaanderen.be/ns/organisatie#contactinfo> <http://example.com/a2_contactinfo_3> .
+
+<http://example.com/a2/code/Hoedanigheid_4> a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>;
+  <https://data.vlaanderen.be/ns/organisatie#contactinfo> <http://example.com/a2_contactinfo_4> .
+
+<http://example.com/a2/code/Hoedanigheid_5> a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>;
+  <https://data.vlaanderen.be/ns/organisatie#contactinfo> <http://example.com/a2_contactinfo_5>,
+    <http://example.com/a2_contactinfo_5b> .
+
+<http://example.com/a2/code/Location_1> a dc:Location;
+  rdfs:label "a2_label_1"@nl;
+  <http://www.w3.org/ns/locn#geometry> <http://example.com/a2_geometry_1> .
+
+<http://example.com/a2/code/Location_2> a dc:Location;
+  rdfs:label "a2_label_2"@nl;
+  <http://www.w3.org/ns/locn#geometry> <http://example.com/a2_geometry_2> .
+
+<http://example.com/a2/code/Location_3> a dc:Location;
+  rdfs:label "a2_label_3"@nl;
+  <http://www.w3.org/ns/locn#geometry> <http://example.com/a2_geometry_3> .
+
+<http://example.com/a2/code/Location_4> a dc:Location;
+  rdfs:label "a2_label_4"@nl;
+  <http://www.w3.org/ns/locn#geometry> <http://example.com/a2_geometry_4> .
+
+<http://example.com/a2/code/Location_5> a dc:Location;
+  rdfs:label "a2_label_5"@nl;
+  <http://www.w3.org/ns/locn#geometry> <http://example.com/a2_geometry_5> .
+
+<http://example.com/a2/code/Membership_1> a <http://www.w3.org/ns/org#Membership>;
+  <http://www.w3.org/ns/org#member> <http://example.com/a2/code/Agent_3>;
+  <http://www.w3.org/ns/org#memberDuring> <http://example.com/a2_memberDuring_1>;
+  <http://www.w3.org/ns/org#organization> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_1> .
+
+<http://example.com/a2/code/Membership_2> a <http://www.w3.org/ns/org#Membership>;
+  <http://www.w3.org/ns/org#member> <http://example.com/a2/code/Agent_5>;
+  <http://www.w3.org/ns/org#memberDuring> <http://example.com/a2_memberDuring_2>;
+  <http://www.w3.org/ns/org#organization> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_2> .
+
+<http://example.com/a2/code/Membership_3> a <http://www.w3.org/ns/org#Membership>;
+  <http://www.w3.org/ns/org#member> <http://example.com/a2/code/Agent_1>;
+  <http://www.w3.org/ns/org#memberDuring> <http://example.com/a2_memberDuring_3>;
+  <http://www.w3.org/ns/org#organization> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_3> .
+
+<http://example.com/a2/code/Membership_4> a <http://www.w3.org/ns/org#Membership>;
+  <http://www.w3.org/ns/org#member> <http://example.com/a2/code/Agent_1>;
+  <http://www.w3.org/ns/org#memberDuring> <http://example.com/a2_memberDuring_4>;
+  <http://www.w3.org/ns/org#organization> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_4> .
+
+<http://example.com/a2/code/Membership_5> a <http://www.w3.org/ns/org#Membership>;
+  <http://www.w3.org/ns/org#member> <http://example.com/a2/code/Agent_1>;
+  <http://www.w3.org/ns/org#memberDuring> <http://example.com/a2_memberDuring_5>;
+  <http://www.w3.org/ns/org#organization> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_5> .
+
+<http://example.com/a2/code/Organization_1> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "a2_description_1"@nl;
+  <http://schema.org/contactPoint> <http://example.com/a2_contactPoint_1>;
+  <http://schema.org/logo> "a2_logo_1";
+  skos:altLabel "a2_altLabel_1"@nl;
+  skos:prefLabel "a2_prefLabel_1"@nl;
+  <http://www.w3.org/ns/org#changedBy> <http://example.com/a2/code/ChangeEvent_3>;
+  <http://www.w3.org/ns/org#classification> <http://example.com/a2_classification_1>;
+  <http://www.w3.org/ns/org#hasPost> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#hasPrimarySite> <http://example.com/a2/code/Site_2>;
+  <http://www.w3.org/ns/org#hasRegisteredSite> <http://example.com/a2/code/Site_1>;
+  <http://www.w3.org/ns/org#hasSite> <http://example.com/a2/code/Site_4>;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/org#hasUnit> <http://example.com/a2/code/OrganizationalUnit_4>;
+  <http://www.w3.org/ns/org#linkedTo> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#purpose> "a2_purpose_1"@nl;
+  <http://www.w3.org/ns/org#resultedFrom> <http://example.com/a2/code/ChangeEvent_3>;
+  <http://www.w3.org/ns/org#subOrganizationOf> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/regorg#orgActivity> <http://example.com/a2_orgActivity_1>;
+  <http://www.w3.org/ns/regorg#orgStatus> <http://example.com/a2_orgStatus_1>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/a2_orgType_1>;
+  foaf:homepage "a2_homepage_1" .
+
+<http://example.com/a2/code/Organization_2> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "a2_description_2"@nl;
+  <http://schema.org/contactPoint> <http://example.com/a2_contactPoint_2>;
+  <http://schema.org/logo> "a2_logo_2";
+  skos:altLabel "a2_altLabel_2"@nl;
+  skos:prefLabel "a2_prefLabel_2"@nl;
+  <http://www.w3.org/ns/org#changedBy> <http://example.com/a2/code/ChangeEvent_1>;
+  <http://www.w3.org/ns/org#classification> <http://example.com/a2_classification_2>;
+  <http://www.w3.org/ns/org#hasPost> <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#hasPrimarySite> <http://example.com/a2/code/Site_2>;
+  <http://www.w3.org/ns/org#hasRegisteredSite> <http://example.com/a2/code/Site_3>;
+  <http://www.w3.org/ns/org#hasSite> <http://example.com/a2/code/Site_2>;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#hasUnit> <http://example.com/a2/code/OrganizationalUnit_4>;
+  <http://www.w3.org/ns/org#linkedTo> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#purpose> "a2_purpose_2"@nl;
+  <http://www.w3.org/ns/org#resultedFrom> <http://example.com/a2/code/ChangeEvent_4>;
+  <http://www.w3.org/ns/org#subOrganizationOf> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/regorg#orgActivity> <http://example.com/a2_orgActivity_2>;
+  <http://www.w3.org/ns/regorg#orgStatus> <http://example.com/a2_orgStatus_2>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/a2_orgType_2>;
+  foaf:homepage "a2_homepage_2" .
+
+<http://example.com/a2/code/Organization_3> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "a2_description_3"@nl;
+  <http://schema.org/contactPoint> <http://example.com/a2_contactPoint_3>;
+  <http://schema.org/logo> "a2_logo_3";
+  skos:altLabel "a2_altLabel_3"@nl;
+  skos:prefLabel "a2_prefLabel_3"@nl;
+  <http://www.w3.org/ns/org#changedBy> <http://example.com/a2/code/ChangeEvent_2>;
+  <http://www.w3.org/ns/org#classification> <http://example.com/a2_classification_3>;
+  <http://www.w3.org/ns/org#hasPost> <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#hasPrimarySite> <http://example.com/a2/code/Site_2>;
+  <http://www.w3.org/ns/org#hasRegisteredSite> <http://example.com/a2/code/Site_3>;
+  <http://www.w3.org/ns/org#hasSite> <http://example.com/a2/code/Site_5>;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#hasUnit> <http://example.com/a2/code/OrganizationalUnit_3>;
+  <http://www.w3.org/ns/org#linkedTo> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#purpose> "a2_purpose_3"@nl;
+  <http://www.w3.org/ns/org#resultedFrom> <http://example.com/a2/code/ChangeEvent_2>;
+  <http://www.w3.org/ns/org#subOrganizationOf> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/regorg#orgActivity> <http://example.com/a2_orgActivity_3>;
+  <http://www.w3.org/ns/regorg#orgStatus> <http://example.com/a2_orgStatus_3>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/a2_orgType_3>;
+  foaf:homepage "a2_homepage_3" .
+
+<http://example.com/a2/code/Organization_4> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "a2_description_4"@nl;
+  <http://schema.org/contactPoint> <http://example.com/a2_contactPoint_4>;
+  <http://schema.org/logo> "a2_logo_4";
+  skos:altLabel "a2_altLabel_4"@nl;
+  skos:prefLabel "a2_prefLabel_4"@nl;
+  <http://www.w3.org/ns/org#changedBy> <http://example.com/a2/code/ChangeEvent_5>;
+  <http://www.w3.org/ns/org#classification> <http://example.com/a2_classification_4>;
+  <http://www.w3.org/ns/org#hasPost> <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#hasPrimarySite> <http://example.com/a2/code/Site_2>;
+  <http://www.w3.org/ns/org#hasRegisteredSite> <http://example.com/a2/code/Site_3>;
+  <http://www.w3.org/ns/org#hasSite> <http://example.com/a2/code/Site_1>;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#hasUnit> <http://example.com/a2/code/OrganizationalUnit_5>;
+  <http://www.w3.org/ns/org#linkedTo> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/org#purpose> "a2_purpose_4"@nl;
+  <http://www.w3.org/ns/org#resultedFrom> <http://example.com/a2/code/ChangeEvent_2>;
+  <http://www.w3.org/ns/org#subOrganizationOf> <http://example.com/a2/code/Organization_2>;
+  <http://www.w3.org/ns/regorg#orgActivity> <http://example.com/a2_orgActivity_4>;
+  <http://www.w3.org/ns/regorg#orgStatus> <http://example.com/a2_orgStatus_4>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/a2_orgType_4>;
+  foaf:homepage "a2_homepage_4" .
+
+<http://example.com/a2/code/Organization_5> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "a2_description_5"@nl;
+  <http://schema.org/contactPoint> <http://example.com/a2_contactPoint_5>, <http://example.com/a2_contactPoint_5b>;
+  <http://schema.org/logo> "a2_logo_5";
+  skos:altLabel "a2_altLabel_5"@nl, "a2_altLabel_5b"@nl;
+  skos:prefLabel "a2_prefLabel_5"@nl;
+  <http://www.w3.org/ns/org#changedBy> <http://example.com/a2/code/ChangeEvent_1>, <http://example.com/a2/code/ChangeEvent_4>;
+  <http://www.w3.org/ns/org#classification> <http://example.com/a2_classification_5>,
+    <http://example.com/a2_classification_5b>;
+  <http://www.w3.org/ns/org#hasPost> <http://example.com/a2/code/Post_3>, <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#hasPrimarySite> <http://example.com/a2/code/Site_2>, <http://example.com/a2/code/Site_5>;
+  <http://www.w3.org/ns/org#hasRegisteredSite> <http://example.com/a2/code/Site_2>,
+    <http://example.com/a2/code/Site_4>;
+  <http://www.w3.org/ns/org#hasSite> <http://example.com/a2/code/Site_1>;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a2/code/Organization_2>,
+    <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#hasUnit> <http://example.com/a2/code/OrganizationalUnit_2>,
+    <http://example.com/a2/code/OrganizationalUnit_5>;
+  <http://www.w3.org/ns/org#linkedTo> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/org#purpose> "a2_purpose_5"@nl, "a2_purpose_5b"@nl;
+  <http://www.w3.org/ns/org#resultedFrom> <http://example.com/a2/code/ChangeEvent_1>,
+    <http://example.com/a2/code/ChangeEvent_3>;
+  <http://www.w3.org/ns/org#subOrganizationOf> <http://example.com/a2/code/Organization_3>,
+    <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/regorg#orgActivity> <http://example.com/a2_orgActivity_5>;
+  <http://www.w3.org/ns/regorg#orgStatus> <http://example.com/a2_orgStatus_5>, <http://example.com/a2_orgStatus_5b>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/a2_orgType_5>, <http://example.com/a2_orgType_5b>;
+  foaf:homepage "a2_homepage_5" .
+
+<http://example.com/a2/code/OrganizationalUnit_1> a <http://www.w3.org/ns/org#OrganizationalUnit>;
+  <http://www.w3.org/ns/org#unitOf> <http://example.com/a2/code/Organization_5> .
+
+<http://example.com/a2/code/OrganizationalUnit_2> a <http://www.w3.org/ns/org#OrganizationalUnit>;
+  <http://www.w3.org/ns/org#unitOf> <http://example.com/a2/code/Organization_2> .
+
+<http://example.com/a2/code/OrganizationalUnit_3> a <http://www.w3.org/ns/org#OrganizationalUnit>;
+  <http://www.w3.org/ns/org#unitOf> <http://example.com/a2/code/Organization_3> .
+
+<http://example.com/a2/code/OrganizationalUnit_4> a <http://www.w3.org/ns/org#OrganizationalUnit>;
+  <http://www.w3.org/ns/org#unitOf> <http://example.com/a2/code/Organization_3> .
+
+<http://example.com/a2/code/OrganizationalUnit_5> a <http://www.w3.org/ns/org#OrganizationalUnit>;
+  <http://www.w3.org/ns/org#unitOf> <http://example.com/a2/code/Organization_2> .
+
+<http://example.com/a2/code/Person_1> a <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#basedAt> <http://example.com/a2/code/Site_5> .
+
+<http://example.com/a2/code/Person_2> a <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#basedAt> <http://example.com/a2/code/Site_3> .
+
+<http://example.com/a2/code/Person_3> a <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#basedAt> <http://example.com/a2/code/Site_1> .
+
+<http://example.com/a2/code/Person_4> a <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#basedAt> <http://example.com/a2/code/Site_2> .
+
+<http://example.com/a2/code/Person_5> a <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#basedAt> <http://example.com/a2/code/Site_1>, <http://example.com/a2/code/Site_4> .
+
+<http://example.com/a2/code/Post_1> a <http://www.w3.org/ns/org#Post>;
+  <http://www.w3.org/ns/org#heldBy> <http://example.com/a2/code/Agent_5>;
+  <http://www.w3.org/ns/org#postIn> <http://example.com/a2/code/Organization_3>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_1> .
+
+<http://example.com/a2/code/Post_2> a <http://www.w3.org/ns/org#Post>;
+  <http://www.w3.org/ns/org#heldBy> <http://example.com/a2/code/Agent_4>;
+  <http://www.w3.org/ns/org#postIn> <http://example.com/a2/code/Organization_1>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_2> .
+
+<http://example.com/a2/code/Post_3> a <http://www.w3.org/ns/org#Post>;
+  <http://www.w3.org/ns/org#heldBy> <http://example.com/a2/code/Agent_2>;
+  <http://www.w3.org/ns/org#postIn> <http://example.com/a2/code/Organization_4>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Post_1>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_3> .
+
+<http://example.com/a2/code/Post_4> a <http://www.w3.org/ns/org#Post>;
+  <http://www.w3.org/ns/org#heldBy> <http://example.com/a2/code/Agent_1>;
+  <http://www.w3.org/ns/org#postIn> <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Post_3>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_4> .
+
+<http://example.com/a2/code/Post_5> a <http://www.w3.org/ns/org#Post>;
+  <http://www.w3.org/ns/org#heldBy> <http://example.com/a2/code/Agent_2>, <http://example.com/a2/code/Agent_3>;
+  <http://www.w3.org/ns/org#postIn> <http://example.com/a2/code/Organization_2>, <http://example.com/a2/code/Organization_5>;
+  <http://www.w3.org/ns/org#reportsTo> <http://example.com/a2/code/Post_3>, <http://example.com/a2/code/Post_4>;
+  <http://www.w3.org/ns/org#role> <http://example.com/a2_role_5> .
+
+<http://example.com/a2/code/PublicOrganisation_1> a <http://data.europa.eu/m8g/PublicOrganisation>;
+  dc:spatial <http://example.com/a2/code/Location_1> .
+
+<http://example.com/a2/code/PublicOrganisation_2> a <http://data.europa.eu/m8g/PublicOrganisation>;
+  dc:spatial <http://example.com/a2/code/Location_1> .
+
+<http://example.com/a2/code/PublicOrganisation_3> a <http://data.europa.eu/m8g/PublicOrganisation>;
+  dc:spatial <http://example.com/a2/code/Location_1> .
+
+<http://example.com/a2/code/PublicOrganisation_4> a <http://data.europa.eu/m8g/PublicOrganisation>;
+  dc:spatial <http://example.com/a2/code/Location_3> .
+
+<http://example.com/a2/code/PublicOrganisation_5> a <http://data.europa.eu/m8g/PublicOrganisation>;
+  dc:spatial <http://example.com/a2/code/Location_2> .
+
+<http://example.com/a2/code/RegisteredOrganization_1> a <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+  <http://www.w3.org/ns/regorg#legalName> "a2_legalName_1"@nl;
+  <http://www.w3.org/ns/regorg#registration> <http://example.com/a2_registration_1>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> <http://example.com/a2_rechtspersoonlijkheid_1>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> <http://example.com/a2_rechtstoestand_1>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> <http://example.com/a2_rechtsvorm_1> .
+
+<http://example.com/a2/code/RegisteredOrganization_2> a <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+  <http://www.w3.org/ns/regorg#legalName> "a2_legalName_2"@nl;
+  <http://www.w3.org/ns/regorg#registration> <http://example.com/a2_registration_2>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> <http://example.com/a2_rechtspersoonlijkheid_2>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> <http://example.com/a2_rechtstoestand_2>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> <http://example.com/a2_rechtsvorm_2> .
+
+<http://example.com/a2/code/RegisteredOrganization_3> a <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+  <http://www.w3.org/ns/regorg#legalName> "a2_legalName_3"@nl;
+  <http://www.w3.org/ns/regorg#registration> <http://example.com/a2_registration_3>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> <http://example.com/a2_rechtspersoonlijkheid_3>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> <http://example.com/a2_rechtstoestand_3>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> <http://example.com/a2_rechtsvorm_3> .
+
+<http://example.com/a2/code/RegisteredOrganization_4> a <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+  <http://www.w3.org/ns/regorg#legalName> "a2_legalName_4"@nl;
+  <http://www.w3.org/ns/regorg#registration> <http://example.com/a2_registration_4>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> <http://example.com/a2_rechtspersoonlijkheid_4>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> <http://example.com/a2_rechtstoestand_4>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> <http://example.com/a2_rechtsvorm_4> .
+
+<http://example.com/a2/code/RegisteredOrganization_5> a <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+  <http://www.w3.org/ns/regorg#legalName> "a2_legalName_5"@nl;
+  <http://www.w3.org/ns/regorg#registration> <http://example.com/a2_registration_5>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> <http://example.com/a2_rechtspersoonlijkheid_5>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> <http://example.com/a2_rechtstoestand_5>;
+  <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> <http://example.com/a2_rechtsvorm_5> .
+
+<http://example.com/a2/code/Site_1> a <http://www.w3.org/ns/org#Site>;
+  <http://www.w3.org/ns/org#siteAddress> <http://example.com/a2_siteAddress_1>;
+  <https://data.vlaanderen.be/ns/organisatie#bestaatUit> <http://example.com/a2_bestaatUit_1> .
+
+<http://example.com/a2/code/Site_2> a <http://www.w3.org/ns/org#Site>;
+  <http://www.w3.org/ns/org#siteAddress> <http://example.com/a2_siteAddress_2>;
+  <https://data.vlaanderen.be/ns/organisatie#bestaatUit> <http://example.com/a2_bestaatUit_2> .
+
+<http://example.com/a2/code/Site_3> a <http://www.w3.org/ns/org#Site>;
+  <http://www.w3.org/ns/org#siteAddress> <http://example.com/a2_siteAddress_3>;
+  <https://data.vlaanderen.be/ns/organisatie#bestaatUit> <http://example.com/a2_bestaatUit_3> .
+
+<http://example.com/a2/code/Site_4> a <http://www.w3.org/ns/org#Site>;
+  <http://www.w3.org/ns/org#siteAddress> <http://example.com/a2_siteAddress_4>;
+  <https://data.vlaanderen.be/ns/organisatie#bestaatUit> <http://example.com/a2_bestaatUit_4> .
+
+<http://example.com/a2/code/Site_5> a <http://www.w3.org/ns/org#Site>;
+  <http://www.w3.org/ns/org#siteAddress> <http://example.com/a2_siteAddress_5>;
+  <https://data.vlaanderen.be/ns/organisatie#bestaatUit> <http://example.com/a2_bestaatUit_5>,
+    <http://example.com/a2_bestaatUit_5b> .
+
+<http://example.com/a2/code/Stopzetting_1> a <https://data.vlaanderen.be/ns/organisatie#Stopzetting>;
+  <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> <http://example.com/a2_redenStopzetting_1> .
+
+<http://example.com/a2/code/Stopzetting_2> a <https://data.vlaanderen.be/ns/organisatie#Stopzetting>;
+  <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> <http://example.com/a2_redenStopzetting_2> .
+
+<http://example.com/a2/code/Stopzetting_3> a <https://data.vlaanderen.be/ns/organisatie#Stopzetting>;
+  <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> <http://example.com/a2_redenStopzetting_3> .
+
+<http://example.com/a2/code/Stopzetting_4> a <https://data.vlaanderen.be/ns/organisatie#Stopzetting>;
+  <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> <http://example.com/a2_redenStopzetting_4> .
+
+<http://example.com/a2/code/Stopzetting_5> a <https://data.vlaanderen.be/ns/organisatie#Stopzetting>;
+  <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> <http://example.com/a2_redenStopzetting_5> .
+
+<http://example.com/a2_bestaatUit_1> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_bestaatUit_2> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_bestaatUit_3> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_bestaatUit_4> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_bestaatUit_5> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_bestaatUit_5b> a <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<http://example.com/a2_classification_1> a skos:Concept .
+
+<http://example.com/a2_classification_2> a skos:Concept .
+
+<http://example.com/a2_classification_3> a skos:Concept .
+
+<http://example.com/a2_classification_4> a skos:Concept .
+
+<http://example.com/a2_classification_5> a skos:Concept .
+
+<http://example.com/a2_classification_5b> a skos:Concept .
+
+<http://example.com/a2_contactPoint_1> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactPoint_2> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactPoint_3> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactPoint_4> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactPoint_5> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactPoint_5b> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_1> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_2> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_3> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_4> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_5> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_contactinfo_5b> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_geometry_1> a <http://www.w3.org/ns/locn#Geometry> .
+
+<http://example.com/a2_geometry_2> a <http://www.w3.org/ns/locn#Geometry> .
+
+<http://example.com/a2_geometry_3> a <http://www.w3.org/ns/locn#Geometry> .
+
+<http://example.com/a2_geometry_4> a <http://www.w3.org/ns/locn#Geometry> .
+
+<http://example.com/a2_geometry_5> a <http://www.w3.org/ns/locn#Geometry> .
+
+<http://example.com/a2_memberDuring_1> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_memberDuring_2> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_memberDuring_3> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_memberDuring_4> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_memberDuring_5> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_orgActivity_1> a skos:Concept .
+
+<http://example.com/a2_orgActivity_2> a skos:Concept .
+
+<http://example.com/a2_orgActivity_3> a skos:Concept .
+
+<http://example.com/a2_orgActivity_4> a skos:Concept .
+
+<http://example.com/a2_orgActivity_5> a skos:Concept .
+
+<http://example.com/a2_orgStatus_1> a skos:Concept .
+
+<http://example.com/a2_orgStatus_2> a skos:Concept .
+
+<http://example.com/a2_orgStatus_3> a skos:Concept .
+
+<http://example.com/a2_orgStatus_4> a skos:Concept .
+
+<http://example.com/a2_orgStatus_5> a skos:Concept .
+
+<http://example.com/a2_orgStatus_5b> a skos:Concept .
+
+<http://example.com/a2_orgType_1> a skos:Concept .
+
+<http://example.com/a2_orgType_2> a skos:Concept .
+
+<http://example.com/a2_orgType_3> a skos:Concept .
+
+<http://example.com/a2_orgType_4> a skos:Concept .
+
+<http://example.com/a2_orgType_5> a skos:Concept .
+
+<http://example.com/a2_orgType_5b> a skos:Concept .
+
+<http://example.com/a2_rechtspersoonlijkheid_1> a skos:Concept .
+
+<http://example.com/a2_rechtspersoonlijkheid_2> a skos:Concept .
+
+<http://example.com/a2_rechtspersoonlijkheid_3> a skos:Concept .
+
+<http://example.com/a2_rechtspersoonlijkheid_4> a skos:Concept .
+
+<http://example.com/a2_rechtspersoonlijkheid_5> a skos:Concept .
+
+<http://example.com/a2_rechtstoestand_1> a skos:Concept .
+
+<http://example.com/a2_rechtstoestand_2> a skos:Concept .
+
+<http://example.com/a2_rechtstoestand_3> a skos:Concept .
+
+<http://example.com/a2_rechtstoestand_4> a skos:Concept .
+
+<http://example.com/a2_rechtstoestand_5> a skos:Concept .
+
+<http://example.com/a2_rechtsvorm_1> a skos:Concept .
+
+<http://example.com/a2_rechtsvorm_2> a skos:Concept .
+
+<http://example.com/a2_rechtsvorm_3> a skos:Concept .
+
+<http://example.com/a2_rechtsvorm_4> a skos:Concept .
+
+<http://example.com/a2_rechtsvorm_5> a skos:Concept .
+
+<http://example.com/a2_redenStopzetting_1> a skos:Concept .
+
+<http://example.com/a2_redenStopzetting_2> a skos:Concept .
+
+<http://example.com/a2_redenStopzetting_3> a skos:Concept .
+
+<http://example.com/a2_redenStopzetting_4> a skos:Concept .
+
+<http://example.com/a2_redenStopzetting_5> a skos:Concept .
+
+<http://example.com/a2_registration_1> a <http://www.w3.org/ns/adms#Identifier> .
+
+<http://example.com/a2_registration_2> a <http://www.w3.org/ns/adms#Identifier> .
+
+<http://example.com/a2_registration_3> a <http://www.w3.org/ns/adms#Identifier> .
+
+<http://example.com/a2_registration_4> a <http://www.w3.org/ns/adms#Identifier> .
+
+<http://example.com/a2_registration_5> a <http://www.w3.org/ns/adms#Identifier> .
+
+<http://example.com/a2_role_1> a <http://www.w3.org/ns/org#Role> .
+
+<http://example.com/a2_role_2> a <http://www.w3.org/ns/org#Role> .
+
+<http://example.com/a2_role_3> a <http://www.w3.org/ns/org#Role> .
+
+<http://example.com/a2_role_4> a <http://www.w3.org/ns/org#Role> .
+
+<http://example.com/a2_role_5> a <http://www.w3.org/ns/org#Role> .
+
+<http://example.com/a2_siteAddress_1> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_siteAddress_2> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_siteAddress_3> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_siteAddress_4> a <http://schema.org/ContactPoint> .
+
+<http://example.com/a2_siteAddress_5> a <http://schema.org/ContactPoint> .
