@@ -1,0 +1,6 @@
+# Join RegisteredOrganization → rechtsvorm → Geslacht
+SELECT DISTINCT ?RegisteredOrganization_url ?Geslacht_url WHERE {
+  ?RegisteredOrganization_url a <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?RegisteredOrganization_url <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> ?Geslacht_url .
+}

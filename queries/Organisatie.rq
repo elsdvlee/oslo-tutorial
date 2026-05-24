@@ -1,0 +1,9 @@
+# Organisatie 
+SELECT DISTINCT ?Organisatie_url ?beschrijving ?heeftSuborganisatie ?homepage ?type ?voorkeursnaam WHERE {
+  ?Organisatie_url a <http://missing.example.com/Organisatie> .
+  OPTIONAL { ?Organisatie_url <http://missing.example.com/beschrijving> ?beschrijving . }
+  OPTIONAL { ?Organisatie_url <http://missing.example.com/heeftSuborganisatie> ?heeftSuborganisatie . }
+  OPTIONAL { ?Organisatie_url <http://missing.example.com/homepage> ?homepage . }
+  OPTIONAL { ?Organisatie_url <http://missing.example.com/type> ?type . }
+  OPTIONAL { ?Organisatie_url <http://missing.example.com/voorkeursnaam> ?voorkeursnaam . }
+}

@@ -1,0 +1,6 @@
+# Join Organization → orgActivity → Geslacht
+SELECT DISTINCT ?Organization_url ?Geslacht_url WHERE {
+  ?Organization_url a <http://www.w3.org/ns/org#Organization> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?Organization_url <http://www.w3.org/ns/regorg#orgActivity> ?Geslacht_url .
+}
