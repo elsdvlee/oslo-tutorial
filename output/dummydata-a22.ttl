@@ -1,0 +1,35 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a22/org/regionaal/burgerzaken-lier> a <http://missing.example.com/Organisatie>;
+  <http://missing.example.com/beschrijving> "regionale overheidsinstantie rond burgerzaken";
+  <http://missing.example.com/heeftSuborganisatie> "a22/org/regionaal/burgerzaken-lier/burgerzaken";
+  <http://missing.example.com/homepage> "https://www.vlaanderen.be/burgerzaken";
+  <http://missing.example.com/type> "orgtype/regionaal";
+  <http://missing.example.com/voorkeursnaam> "Vlaamse Overheid Burgerzaken" .
+
+<http://example.com/a22/org/regionaal/burgerzaken-lier/burgerzaken> a <http://missing.example.com/Organisatie>;
+  <http://missing.example.com/beschrijving> "regionaal agentschap voor burgerzaken in Lier";
+  <http://missing.example.com/homepage> "https://www.vlaanderen.be/burgerzaken/lier";
+  <http://missing.example.com/type> "orgtype/regionaal";
+  <http://missing.example.com/voorkeursnaam> "Agentschap Burgerzaken Lier" .
+
+<http://example.com/a22/persoon/22.20.20-022.20> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://missing.example.com/isLidVan> "a22/org/regionaal/burgerzaken-lier/burgerzaken";
+  foaf:familyName "De Ridder";
+  foaf:givenName "Sarah";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/vrouw>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Sarah De Ridder" .
+
+<http://example.com/geslacht/vrouw> a skos:Concept .
